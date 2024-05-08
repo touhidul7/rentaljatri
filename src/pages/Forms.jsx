@@ -295,7 +295,9 @@ const Forms = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+
+                <input type="checkbox" className="toggle" checked />
+               {/*  <div>
                   <label for="toggle" class="flex items-center cursor-pointer">
                     <div class="relative">
                       <input id="toggle" type="checkbox" class="hidden" />
@@ -305,7 +307,7 @@ const Forms = () => {
                       <div class="toggle-dot absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0"></div>
                     </div>
                   </label>
-                </div>
+                </div> */}
               </div>
   
               <hr />
