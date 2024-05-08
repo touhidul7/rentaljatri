@@ -36,7 +36,7 @@ const Rental = () => {
                   Which vehicle do you need?
                 </h1>
                 <div className="grid grid-cols-3 gap-4 mb-6 px-4">
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-error">
+                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
                     <img
                       src="../../../public/images/s1.png"
                       alt=""
@@ -45,7 +45,7 @@ const Rental = () => {
                     <h5 className="text-center font-semibold">Sedan Car</h5>
                     <p className="text-center text-sm">4 Seats capacity</p>
                   </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-error">
+                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
                     <img
                       src="../../../public/images/s1.png"
                       alt=""
@@ -54,7 +54,7 @@ const Rental = () => {
                     <h5 className="text-center font-semibold">Sedan Car</h5>
                     <p className="text-center text-sm">4 Seats capacity</p>
                   </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-error">
+                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
                     <img
                       src="../../../public/images/s1.png"
                       alt=""
@@ -63,7 +63,7 @@ const Rental = () => {
                     <h5 className="text-center font-semibold">Sedan Car</h5>
                     <p className="text-center text-sm">4 Seats capacity</p>
                   </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-error">
+                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
                     <img
                       src="../../../public/images/s1.png"
                       alt=""
@@ -72,7 +72,7 @@ const Rental = () => {
                     <h5 className="text-center font-semibold">Sedan Car</h5>
                     <p className="text-center text-sm">4 Seats capacity</p>
                   </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-error">
+                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
                     <img
                       src="../../../public/images/s1.png"
                       alt=""
