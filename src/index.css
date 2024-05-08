@@ -1,3 +1,277 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+:root{
+    background-color:#FEF8F7;
+    margin-top: 50px;
+    margin-bottom: px; 
+  }
+  
+  .main-form{
+    border-radius: 10px;
+  }
+  
+  hr{
+    background-color: rgb(225, 225, 225);
+    padding: .2px;
+  }
+  
+  /* first div */
+  
+  .select-vechiel{
+    margin-top: -10px;
+  }
+  .arrow{
+    color: black;
+  }
+  .rental{
+    font-size: 25px;
+    color: black;
+  }
+  .trip{
+    font-size: 17px;
+    color: black;
+  
+  }
+  .sedan{
+    color: black;
+    font-weight: 500;
+  }
+  .car-seat{
+    color: rgb(137, 137, 137);
+  }
+  .car{
+    width: 60px;
+    height: auto;
+  }
+  .item-detail{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .devider{
+    padding: 4px;
+    background-color: #F7F7F7;
+    width: 600px;
+  }
+  .pickup{
+    color: black;
+    font-weight: 500;
+  }
+  .dt{
+    color: black;
+    font-weight: 500;
+  }
+  .pen{
+    color: rgb(114, 114, 255);
+    border-radius: 50%;
+    border: none;
+    padding: 7px;
+    background-color: #E4F0FB;
+  }
+  .plus{
+    color: rgb(117, 117, 117);
+    border-radius: 50%;
+    border: 1px solid rgb(157, 157, 157);
+    padding: 5px;
+    background-color: #e3e3e3;
+  }
+  .schedule-logo{
+    color: black;
+    font-size: 30px;
+  }
+  .schedule-logo2{
+    color: black;
+    font-size: 25px;
+  }
+  .pickup-logo{
+    background-color: #FF5861;
+    border-radius: 50%;
+    color:#FF5861 ;
+    font-size: 17px;
+  }
+  .pickup-logo2{
+    border-radius: 50%;
+    color:#FF5861 ;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .vertile{
+    background-color: rgb(176, 176, 176);
+    height: 50px;
+    width: 2px;
+  }
+  .drop-logo{
+    background-color: #1E88E5;
+    color: #1E88E5;
+    font-size: 17px;
+  }
+  
+  .rotate-left {
+    transform: rotate(-90deg);
+  }
+  
+  /* second div----- */
+  
+  .dtt{
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: #2095F3;
+    font-weight: 600;
+  }
+  .dtt2{
+    width: 173px;
+  }
+  
+  
+  .toggle-line {
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-line2 {
+    background-color: #F04935;
+  }
+  
+  .toggle-dot {
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  
+  .pick-drop{
+    margin-top: -20px;
+  }
+  
+  .search{
+  background-color: white;
+  }
+  .search::placeholder {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+  
+  .messege{
+    width: 520px;
+    height: 100px;
+    background-color: rgb(227, 227, 227);
+    padding: 10px;
+    color: black;
+    border-radius: 15px;
+  }
+  
+  .form-btn{
+    background-color: #F48072;
+    color: white;
+    font-size: 17px;
+    width: 520px;
+    border-radius: 25px;
+  }
+  .form-btn:hover{
+    background-color: #F48072;
+  }
+  
+  /* responsive------ */
+  @media (max-width: 800px) {
+  
+    :root{
+      background-color:#FEF8F7;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  
+    .sedan {
+     font-size: 14px;
+    }
+  
+    .devider {
+      width: 360px;
+    }
+  
+    .main-form{
+      width: 360px;
+    }
+  
+    .header-part{
+      background-color:#F04935 ;
+      padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+  
+    .rental{
+      color: rgb(255, 255, 255);
+    }
+    .trip{
+      color: rgb(255, 255, 255);
+    }
+    .arrow {
+      color: rgb(255, 255, 255);
+    }
+  
+    .car-brand{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .car {
+      width: 50px;
+      height: auto;
+    }
+    .car-seat {
+      font-size: 14px;
+    }
+  
+  .destination{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .border-dashed {
+      
+    width: 300px;
+  }
+  .pickup{
+    font-size: 14px;
+  }
+    .pickup-logo {
+      font-size: 13px;
+    }
+    .pickup-logo2 {
+      font-size: 13px;
+    }
+    .drop-logo {
+      font-size: 13px;
+    }
+    .vertile{
+      background-color: rgb(176, 176, 176);
+      height: 55px;
+      width: 2px;
+    }
+  
+    .date-time {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .dt {
+      font-size: 14px;
+    }
+    .dtt{
+      color: rgb(255, 255, 255);
+      border: none;
+      font-weight: 400;
+      width: 145px;
+      font-size: 12px;
+      background-color: #2095F3;
+    }
+    .messege {
+      width: 340px;
+      height: 100px;
+    }
+    .form-btn {
+      width: 340px;
+    }
+  }
+  

@@ -9,6 +9,7 @@ import './index.css'
 import MainLayout from './layouts/MainLayout.jsx';
 import Home from './pages/Home.jsx';
 import Rental from './pages/Rental.jsx';
+import Forms from './pages/Forms.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/rental',
         element: <Rental/>
+      },
+      {
+        path: '/forms',
+        element: <Forms/>
       }
     ]
   },
