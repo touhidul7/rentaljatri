@@ -147,7 +147,8 @@
   }
   
   .search{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  width: 280px;
   }
   .search::placeholder {
     font-size: 12px; /* Adjust the font size as needed */

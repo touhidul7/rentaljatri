@@ -13,7 +13,7 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
+ $(document).ready(function(){
   $('#toggle').change(function(){
     if($(this).is(':checked')){
       $('.toggle-line').addClass(' toggle-line2 ');
@@ -21,7 +21,7 @@ $(document).ready(function(){
       $('.toggle-line').removeClass(' toggle-line2 ');
     }
   });
-});
+}); 
 
 
   $(document).ready(function(){
@@ -35,13 +35,15 @@ $(document).ready(function(){
   });
 
 
-  
   $(document).ready(function(){
     $('#toggleIcon').click(function(){
       $('#hiddenDiv3, #hiddenDiv4, #hiddenDiv5, #hiddenDiv6').toggleClass('hidden');
     });
   }); */
 
+
+
+  
 function App() {
   const [count, setCount] = useState(0)
 
