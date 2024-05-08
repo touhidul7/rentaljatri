@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+/* 
 $(document).ready(function(){
   $('#toggle').change(function(){
     if($(this).is(':checked')){
@@ -40,13 +40,14 @@ $(document).ready(function(){
     $('#toggleIcon').click(function(){
       $('#hiddenDiv3, #hiddenDiv4, #hiddenDiv5, #hiddenDiv6').toggleClass('hidden');
     });
-  });
+  }); */
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <input type="checkbox" className="toggle" checked />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

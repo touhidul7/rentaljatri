@@ -1,7 +1,9 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import CarSelect from "../components/CarSelect";
 
 const Rental = () => {
+  
   return (
     <div>
       <div
@@ -12,10 +14,6 @@ const Rental = () => {
           height: "500px", // Adjust the height as needed
         }}
       >
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        />
         <div class="my-2">
           <div class="flex flex-col items-center text-start  lg:flex-row ml-20 mt-0">
             <div class="lg:w-1/2">
@@ -30,70 +28,7 @@ const Rental = () => {
               </button>
             </div>
 
-            <div className="flex mt-6 lg:w-1/2 lg:justify-end items-end lg:mt-4 lg:h-[550px] lg:-mb-16 mr-14">
-              <div className="w-full max-w-md bg-white border-2 rounded-lg dark:bg-white px-2 pt-6">
-                <h1 className="font-semibold mb-4 ml-5 text-lg">
-                  Which vehicle do you need?
-                </h1>
-                <div className="grid grid-cols-3 gap-4 mb-6 px-4">
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
-                    <img
-                      src="../../../public/images/s1.png"
-                      alt=""
-                      className="w-[60px] h-[60px] mx-auto"
-                    />
-                    <h5 className="text-center font-semibold">Sedan Car</h5>
-                    <p className="text-center text-sm">4 Seats capacity</p>
-                  </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
-                    <img
-                      src="../../../public/images/s1.png"
-                      alt=""
-                      className="w-[60px] h-[60px] mx-auto"
-                    />
-                    <h5 className="text-center font-semibold">Sedan Car</h5>
-                    <p className="text-center text-sm">4 Seats capacity</p>
-                  </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
-                    <img
-                      src="../../../public/images/s1.png"
-                      alt=""
-                      className="w-[60px] h-[60px] mx-auto"
-                    />
-                    <h5 className="text-center font-semibold">Sedan Car</h5>
-                    <p className="text-center text-sm">4 Seats capacity</p>
-                  </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
-                    <img
-                      src="../../../public/images/s1.png"
-                      alt=""
-                      className="w-[60px] h-[60px] mx-auto"
-                    />
-                    <h5 className="text-center font-semibold">Sedan Car</h5>
-                    <p className="text-center text-sm">4 Seats capacity</p>
-                  </button>
-                  <button className="w-[125px] h-[165px] pt-4 bg-[#F7F7F7]  rounded-lg px-2 hover:bg-[#f04935] transition duration-500 ease-in-out hover:text-white">
-                    <img
-                      src="../../../public/images/s1.png"
-                      alt=""
-                      className="w-[60px] h-[60px] mx-auto"
-                    />
-                    <h5 className="text-center font-semibold">Sedan Car</h5>
-                    <p className="text-center text-sm">4 Seats capacity</p>
-                  </button>
-                </div>
-                
-               
-
-              <Link class="nav-link" to="/forms">
-              <button className="bg-[#f04935] text-white rounded-full ml-9 my-4 py-3 mx-auto w-4/5 font-semibold">
-                  Request Trip
-                </button>
-              </Link>
-
-                
-              </div>
-            </div>
+            <CarSelect />
           </div>
         </div>
       </div>
