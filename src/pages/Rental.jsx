@@ -143,7 +143,7 @@ const Rental = () => {
               <p className="py-8">
                 Get in touch for a customized transport plan your company
               </p>
-              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-10  font-semibold">
+              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-16  font-semibold">
                 Request Trip
               </button>
               {/*  <button className="bg-neutral-800 flex items-center gap-2 text-white rounded-full px-10 my-4 py-2 font-semibold ">
@@ -247,7 +247,7 @@ const Rental = () => {
                 </p>
               </div>
               <div>
-              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-10  font-semibold">
+              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-16  font-semibold">
                 Request Trip
               </button>
                {/*  <button className="bg-white flex gap-2 text-neutral-500 rounded-full px-6 my-4 py-2 font-semibold mt-10">
