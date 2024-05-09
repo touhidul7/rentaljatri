@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-red-500 text-white font-bold mb-0 flex justify-around">
+            <footer className="footer p-10 bg-black text-white font-bold mb-0 flex justify-around">
                 <nav>
                     <h6 className="">ACME Industries Ltd.</h6>
                     <p>Providing reliable tech since 1992</p>
