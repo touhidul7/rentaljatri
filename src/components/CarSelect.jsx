@@ -1,23 +1,41 @@
-import React, { useState } from "react";
+import { useEffect } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const CarSelect = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
+  const [cars, setCars] = useState([])
+
 
   const handleSelectVehicle = (vehicle) => {
     setSelectedVehicle(vehicle);
   };
 
+  useEffect(() => {
+    fetch('/data/data.json')
+    .then(res=> res.json())
+    .then(data=> {
+      setCars(data)
+    })
+    .catch(err=> {
+      console.log(err)
+    })
+  }, [])
+
   
   /* cars details---------- */
-  const cars =[
-    {id:1,name:"Sedan Car",seat:"4 Seats capacity",img:"../../images/s1.png" },
-    {id:2,name:"Primium Car",seat:"4 Seats capacity",img:"../../images/s2.png" },
-    {id:3,name:"Mini Microbus",seat:"7 Seats capacity",img:"../../images/s3.png" },
-    {id:4,name:"Microbus",seat:"11 Seats capacity",img:"../../images/s4.png" },
-    {id:5,name:"Minibus",seat:"22-28 Seats capacity",img:"../../images/s5.png" },
-  ]
+//   const cars = [
+//     { id: 1, name: "Sedan Car", seat: "4 Seats capacity", img: "../../images/s1.png", fuelType: "Gasoline", sunroof: true, wifi: true, carCondition: "Excellent", driverStatus: "Available" },
+//     { id: 2, name: "Premium Car", seat: "4 Seats capacity", img: "../../images/s2.png", fuelType: "Diesel", sunroof: false, wifi: true, carCondition: "Good", driverStatus: "Available" },
+//     { id: 3, name: "Mini Microbus", seat: "7 Seats capacity", img: "../../images/s3.png", fuelType: "Gasoline", wifi: true, carCondition: "Fair", driverStatus: "Unavailable" },
+//     { id: 4, name: "Microbus", seat: "11 Seats capacity", img: "../../images/s4.png", fuelType: "Diesel", wifi: false, carCondition: "Fair", driverStatus: "Available" },
+//     { id: 5, name: "Minibus", seat: "22-28 Seats capacity", img: "../../images/s5.png", fuelType: "Diesel", wifi: false, carCondition: "Excellent", driverStatus: "Available" }
+// ];
+
   return (
+    <>
+    {
+    cars.length != 0 ?
     <div className="flex mt-6 lg:w-1/2 lg:justify-end items-end lg:mt-4 lg:h-[550px] lg:-mb-16 mr-14">
     <div className="w-full max-w-md bg-white border-2 rounded-lg dark:bg-white px-2 pt-6">
       <h1 className="font-semibold mb-4 ml-5 text-lg">
@@ -46,13 +64,16 @@ const CarSelect = () => {
         }
       </div>
 
-      <Link class="nav-link" to="/forms">
+      <Link class="nav-link" to={`forms/${selectedVehicle}`}>
         <button className="bg-[#29D8DB] text-white rounded-full ml-9 my-4 py-3 mx-auto w-4/5 font-semibold">
           Request Trip
         </button>
       </Link>
     </div>
-  </div>
+  </div> : <div>Loading...</div>
+  
+}
+</>
   )
 };
 

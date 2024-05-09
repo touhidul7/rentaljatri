@@ -1,21 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
 
 const Forms = () => {
   const [isToggled, setIsToggled] = useState(false);
+  
+  const param = parseInt(useParams().id)
 
+  console.log(param)
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
+
+  const [cars, setCars] = useState([])
+  const [selectedVehicle, setSelectedVehicle] = useState(null);
+
+
+  const handleSelectVehicle = (vehicle) => {
+    setSelectedVehicle(vehicle);
+  };
+
+  useEffect(() => {
+    fetch('/data/data.json')
+    .then(res=> res.json())
+    .then(data=> {
+      setCars(data)
+      const car = data.filter(c=> c.id == param)
+      setSelectedVehicle(car[0])
+    })
+    .catch(err=> {
+      console.log(err)
+    })
+  }, [])
+  console.log(selectedVehicle)
+
+
   return (
+    <>
+    {
+    selectedVehicle ? 
     <div>
       <div class="flex justify-center items-center">
         <div class=" main-form w-[600px] shadow-md  bg-white">
           <div class="bg-white pb-5 pt-5 ">
             <div class="header-part bg-white mb-3 px-10 ">
-              <a href="#">
+              <Link to='/'>
                 <span class="arrow material-symbols-outlined">arrow_back</span>
-              </a>
+              </Link>
               <h1 className="rental">Rental</h1>
               <h3 className="trip">Request a Trip</h3>
             </div>
@@ -27,15 +58,16 @@ const Forms = () => {
                 <div>
                   <img
                     className="car"
-                    src="../../public/images/s1.png"
+                    src={selectedVehicle.img}
                     alt=""
                   />
                 </div>
                 <div>
-                  <h2 className="sedan">Sedan Car</h2>
-                  <p className="car-seat">4 Seats</p>
+                  <h2 className="sedan">{selectedVehicle.name}</h2>
+                  <p className="car-seat">{selectedVehicle.seat}</p>
                 </div>
               </div>
+              
               <div>
                 <a
                   href="#"
@@ -472,7 +504,9 @@ const Forms = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> : <div>Loading...</div>
+    }
+    </>
   );
 };
 

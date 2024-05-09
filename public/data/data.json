@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Sedan Car",
+        "seat": "4 Seats capacity",
+        "img": "../../images/s1.png",
+        "fuelType": "Gasoline",
+        "sunroof": true,
+        "wifi": true,
+        "carCondition": "Excellent",
+        "driverStatus": "Available"
+    },
+    {
+        "id": 2,
+        "name": "Premium Car",
+        "seat": "4 Seats capacity",
+        "img": "../../images/s2.png",
+        "fuelType": "Diesel",
+        "sunroof": false,
+        "wifi": true,
+        "carCondition": "Good",
+        "driverStatus": "Available"
+    },
+    {
+        "id": 3,
+        "name": "Mini Microbus",
+        "seat": "7 Seats capacity",
+        "img": "../../images/s3.png",
+        "fuelType": "Gasoline",
+        "wifi": true,
+        "carCondition": "Fair",
+        "driverStatus": "Unavailable"
+    },
+    {
+        "id": 4,
+        "name": "Microbus",
+        "seat": "11 Seats capacity",
+        "img": "../../images/s4.png",
+        "fuelType": "Diesel",
+        "wifi": false,
+        "carCondition": "Fair",
+        "driverStatus": "Available"
+    },
+    {
+        "id": 5,
+        "name": "Minibus",
+        "seat": "22-28 Seats capacity",
+        "img": "../../images/s5.png",
+        "fuelType": "Diesel",
+        "wifi": false,
+        "carCondition": "Excellent",
+        "driverStatus": "Available"
+    },
+    {
+        "id": 6,
+        "name": "Luxury SUV",
+        "seat": "5 Seats capacity",
+        "img": "../../images/s5.png",
+        "fuelType": "Gasoline",
+        "sunroof": true,
+        "wifi": true,
+        "carCondition": "Excellent",
+        "driverStatus": "Available"
+    }
+]
