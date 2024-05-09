@@ -213,16 +213,7 @@ const Forms = () => {
                   />
                 </div>
 
-                <div className="relative" data-v-a0ca3c8a>
-                  <hr class="border-dashed mt-[4px] w-[470px]" />
-                  {/* <img
-                    id="toggleIcon"
-                    src="https://rental.jatri.co/_nuxt/add-via-point.68721e6d.svg"
-                    className="w-[30px] h-[30px] absolute -right-[10px] -top-[13px] transition-all ease-in-out cursor-pointer "
-                    alt
-                    data-v-a0ca3c8a
-                  /> */}
-                </div>
+               
 
                 {/*  */}
                 {/*    <div id="hiddenDiv5" className="hidden">
@@ -431,11 +422,9 @@ const Forms = () => {
                   </button>
                 </form>
                 <div className="modal-body p-2 ">
-                  
-                  <div className="hero">
-                    <div className="hero-content flex-col">
+                    
                       
-                      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                      <div className="card ">
                         <form className="card-body">
                           <div className="form-control">
                             <label className="label">
@@ -472,8 +461,8 @@ const Forms = () => {
                           </div>
                         </form>
                       </div>
-                    </div>
-                  </div>
+                    
+                  
 
 
 
