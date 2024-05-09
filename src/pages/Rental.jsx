@@ -224,11 +224,15 @@ const Rental = () => {
       <div className="mt-16">
         <div
           style={{
-            backgroundImage:
-              'url("https://rental.jatri.co/_nuxt/rental_update.db992fca.png")',
-            backgroundRepeat: "no-repeat",
-            height: "250px",
-            backgroundSize: "Cover", // Adjust the height as needed
+
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "Cover",
+          backgroundPosition: " Center",
+          height: "300px",
+          backgroundImage:
+            "linear-gradient(to bottom,rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1.0)), url('../../public/images/hero-car2.jpg')", 
+
+
           }}
         >
           <div>
@@ -254,18 +258,7 @@ const Rental = () => {
             </div>
           </div>
         </div>
-        <div>
-          {/* <div style={{
-                    backgroundImage: 'url("https://rental.jatri.co/_nuxt/rental_update.db992fca.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'Cover',height: '345px' // Adjust the height as needed
-                    }}> 
-                    </div>*/}
-          <img
-            src="../../public/images/footer-img.a9a8541a.png"
-            alt=""
-            className="bg-[#29D8DB]"
-            width= "1550px"
-          />
-        </div>   
+  
       </div>
     </div>
   );
