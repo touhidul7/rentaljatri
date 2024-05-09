@@ -15,7 +15,7 @@ const CarSelect = () => {
       </h1>
       <div className="grid grid-cols-3 gap-4 mb-6 px-4">
         <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center ${
+          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
             selectedVehicle === 1
               ? "bg-[#f04935] text-white"
               : "bg-[#F7F7F7]"
@@ -31,7 +31,7 @@ const CarSelect = () => {
           <p className="text-sm">4 Seats capacity</p>
         </button>
         <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center ${
+          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
             selectedVehicle === 2
               ? "bg-[#f04935] text-white"
               : "bg-[#F7F7F7]"
@@ -47,7 +47,7 @@ const CarSelect = () => {
           <p className="text-sm">4 Seats capacity</p>
         </button>
         <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center ${
+          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
             selectedVehicle === 3
               ? "bg-[#f04935] text-white"
               : "bg-[#F7F7F7]"
@@ -63,7 +63,7 @@ const CarSelect = () => {
           <p className="text-sm">4 Seats capacity</p>
         </button>
         <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center ${
+          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
             selectedVehicle === 4
               ? "bg-[#f04935] text-white"
               : "bg-[#F7F7F7]"
@@ -79,7 +79,7 @@ const CarSelect = () => {
           <p className="text-sm">4 Seats capacity</p>
         </button>
         <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center ${
+          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
             selectedVehicle === 5
               ? "bg-[#f04935] text-white"
               : "bg-[#F7F7F7]"

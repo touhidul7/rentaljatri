@@ -224,9 +224,8 @@ const Forms = () => {
                   /> */}
                 </div>
 
-
                 {/*  */}
-             {/*    <div id="hiddenDiv5" className="hidden">
+                {/*    <div id="hiddenDiv5" className="hidden">
                   <h2 className="pickup ">Via Point</h2>
                   <input
                     placeholder="Search via location "
@@ -243,7 +242,6 @@ const Forms = () => {
                   <hr class="border-dashed mt-[4px] w-[470px]" />
                 </div> */}
                 {/*  */}
-
 
                 <div>
                   <h2 className="pickup">Drop Off Point</h2>
@@ -417,7 +415,71 @@ const Forms = () => {
           </div>
 
           <div className="flex justify-center">
-            <button className="form-btn btn btn-secondary px-20">Next</button>
+            <button
+              onClick={() => document.getElementById("my_modal_4").showModal()}
+              className="form-btn btn btn-secondary px-20"
+            >
+              Next
+            </button>
+
+            {/*modal ------*/}
+            <dialog id="my_modal_4" className="modal main-modal">
+              <div className="modal-box bg-white text-black">
+                <form method="dialog">
+                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                    ✕
+                  </button>
+                </form>
+                <div className="modal-body p-2 ">
+                  
+                  <div className="hero">
+                    <div className="hero-content flex-col">
+                      
+                      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <form className="card-body">
+                          <div className="form-control">
+                            <label className="label">
+                              <span className="label-text">Email</span>
+                            </label>
+                            <input
+                              type="email"
+                              placeholder="email"
+                              className="input input-bordered"
+                              required
+                            />
+                          </div>
+                          <div className="form-control">
+                            <label className="label">
+                              <span className="label-text">Password</span>
+                            </label>
+                            <input
+                              type="password"
+                              placeholder="password"
+                              className="input input-bordered"
+                              required
+                            />
+                            <label className="label">
+                              <a
+                                href="#"
+                                className="label-text-alt link link-hover"
+                              >
+                                Forgot password?
+                              </a>
+                            </label>
+                          </div>
+                          <div className="form-control mt-6">
+                            <button className="btn btn-primary">Login</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
