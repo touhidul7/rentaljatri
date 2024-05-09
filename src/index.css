@@ -277,3 +277,23 @@
     }
   }
   
+
+  /* Location Auto Complete */
+  .leaflet-locationiq-results {
+    position: static;
+    margin-top: 50px;
+  }
+
+  .leaflet-bar a.leaflet-locationiq-search-icon{
+    display: none;
+  }
+  .leaflet-bar{
+    box-shadow: none
+  }
+
+  .leaflet-locationiq-expanded .leaflet-locationiq-input{
+    padding: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    line-height: 0px;
+  }

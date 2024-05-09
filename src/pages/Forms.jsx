@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
+import AutoComplete from "../components/AutoComplete";
 
 const Forms = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -7,8 +8,10 @@ const Forms = () => {
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
+  
   return (
     <div>
+  
       <div class="flex justify-center items-center">
         <div class=" main-form w-[600px] shadow-md  bg-white">
           <div class="bg-white pb-5 pt-5 ">
@@ -206,11 +209,12 @@ const Forms = () => {
               <div className="flex flex-col gap-5 me-20">
                 <div>
                   <h2 className="pickup">Pickup Point</h2>
-                  <input
+                  {/* <input
                     placeholder="Search pickup location"
                     className="search focus:outline-none"
                     type="search"
-                  />
+                  /> */}
+                  <AutoComplete/>
                 </div>
 
                 <div className="relative" data-v-a0ca3c8a>
@@ -272,10 +276,12 @@ const Forms = () => {
                 </div>
               </div>
               <div>
+              
+
                 <input
                   type="date"
                   placeholder="Type here"
-                  className="dtt input  w-full max-w-xs "
+                  className="dtt input input-bordered input-primary w-full max-w-xs"
                 />
               </div>
             </div>
