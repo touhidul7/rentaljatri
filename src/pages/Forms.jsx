@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
-<<<<<<< HEAD
-import AutoComplete from "../components/AutoComplete";
-import AutoComplete2 from "../components/AutoComplete2";
-=======
 import { Link, useParams } from "react-router-dom";
->>>>>>> db9cd2c0966ad47d5b0fb4a3a8a426a7b67d2739
 
 const Forms = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -14,15 +9,10 @@ const Forms = () => {
 
   console.log(param)
   const handleToggle = () => {
+    
     setIsToggled(!isToggled);
   };
 
-<<<<<<< HEAD
-  const handleCloseModal = () => {
-    document.getElementById("my_modal_3").close();
-  };
-
-=======
   const [cars, setCars] = useState([])
   const [selectedVehicle, setSelectedVehicle] = useState(null);
 
@@ -46,7 +36,6 @@ const Forms = () => {
   console.log(selectedVehicle)
 
 
->>>>>>> db9cd2c0966ad47d5b0fb4a3a8a426a7b67d2739
   return (
     <>
     {
