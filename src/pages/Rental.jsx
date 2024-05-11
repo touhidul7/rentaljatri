@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import CarSelect from "../components/CarSelect";
 
 const Rental = () => {
@@ -143,7 +143,7 @@ const Rental = () => {
               <p className="py-8">
                 Get in touch for a customized transport plan your company
               </p>
-              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-10  font-semibold">
+              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-16  font-semibold">
                 Request Trip
               </button>
               {/*  <button className="bg-neutral-800 flex items-center gap-2 text-white rounded-full px-10 my-4 py-2 font-semibold ">
@@ -224,11 +224,15 @@ const Rental = () => {
       <div className="mt-16">
         <div
           style={{
-            backgroundImage:
-              'url("https://rental.jatri.co/_nuxt/rental_update.db992fca.png")',
-            backgroundRepeat: "no-repeat",
-            height: "250px",
-            backgroundSize: "Cover", // Adjust the height as needed
+
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "Cover",
+          backgroundPosition: " Center",
+          height: "300px",
+          backgroundImage:
+            "linear-gradient(to bottom,rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1.0)), url('../../public/images/hero-car2.jpg')", 
+
+
           }}
         >
           <div>
@@ -243,7 +247,7 @@ const Rental = () => {
                 </p>
               </div>
               <div>
-              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-10  font-semibold">
+              <button className="bg-[#29D8DB] text-white rounded-full   py-3 px-16  font-semibold">
                 Request Trip
               </button>
                {/*  <button className="bg-white flex gap-2 text-neutral-500 rounded-full px-6 my-4 py-2 font-semibold mt-10">
@@ -254,18 +258,7 @@ const Rental = () => {
             </div>
           </div>
         </div>
-        <div>
-          {/* <div style={{
-                    backgroundImage: 'url("https://rental.jatri.co/_nuxt/rental_update.db992fca.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'Cover',height: '345px' // Adjust the height as needed
-                    }}> 
-                    </div>*/}
-          <img
-            src="../../public/images/footer-img.a9a8541a.png"
-            alt=""
-            className="bg-[#29D8DB]"
-            width= "1550px"
-          />
-        </div>   
+  
       </div>
     </div>
   );
