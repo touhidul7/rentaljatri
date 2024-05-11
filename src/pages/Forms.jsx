@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
 import AutoComplete from "../components/AutoComplete";
+import AutoComplete2 from "../components/AutoComplete2";
 
 const Forms = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -8,10 +9,13 @@ const Forms = () => {
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
-  
+
+  const handleCloseModal = () => {
+    document.getElementById("my_modal_3").close();
+  };
+
   return (
     <div>
-  
       <div class="flex justify-center items-center">
         <div class=" main-form w-[600px] shadow-md  bg-white">
           <div class="bg-white pb-5 pt-5 ">
@@ -52,7 +56,7 @@ const Forms = () => {
                 <dialog id="my_modal_3" className="modal main-modal">
                   <div className="modal-box bg-white text-black">
                     <form method="dialog">
-                      <h3 className="select-vechiel">Select Vehicl Type</h3>
+                      <h3 className="select-vechiel">Select Vehicle Type</h3>
                       <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                         ✕
                       </button>
@@ -80,6 +84,7 @@ const Forms = () => {
                             name="radio-10"
                             className="radio checked:bg-red-500 border-gray-400"
                             checked
+                            onClick={handleCloseModal}
                           />
                         </label>
                       </div>
@@ -104,6 +109,7 @@ const Forms = () => {
                             name="radio-10"
                             className="radio checked:bg-red-500 border-gray-400"
                             checked
+                            onClick={handleCloseModal}
                           />
                         </label>
                       </div>
@@ -128,6 +134,7 @@ const Forms = () => {
                             name="radio-10"
                             className="radio checked:bg-red-500 border-gray-400"
                             checked
+                            onClick={handleCloseModal}
                           />
                         </label>
                       </div>
@@ -152,6 +159,7 @@ const Forms = () => {
                             name="radio-10"
                             className="radio checked:bg-red-500 border-gray-400"
                             checked
+                            onClick={handleCloseModal}
                           />
                         </label>
                       </div>
@@ -176,6 +184,7 @@ const Forms = () => {
                             name="radio-10"
                             className="radio checked:bg-red-500 border-gray-400"
                             checked
+                            onClick={handleCloseModal}
                           />
                         </label>
                       </div>
@@ -209,22 +218,13 @@ const Forms = () => {
               <div className="flex flex-col gap-5 me-20">
                 <div>
                   <h2 className="pickup">Pickup Point</h2>
+                  
+                    <AutoComplete2 />
+                  
                   {/* <input
                     placeholder="Search pickup location"
                     className="search focus:outline-none"
                     type="search"
-                  /> */}
-                  <AutoComplete/>
-                </div>
-
-                <div className="relative" data-v-a0ca3c8a>
-                  <hr class="border-dashed mt-[4px] w-[470px]" />
-                  {/* <img
-                    id="toggleIcon"
-                    src="https://rental.jatri.co/_nuxt/add-via-point.68721e6d.svg"
-                    className="w-[30px] h-[30px] absolute -right-[10px] -top-[13px] transition-all ease-in-out cursor-pointer "
-                    alt
-                    data-v-a0ca3c8a
                   /> */}
                 </div>
 
@@ -249,11 +249,12 @@ const Forms = () => {
 
                 <div>
                   <h2 className="pickup">Drop Off Point</h2>
-                  <input
+                  <AutoComplete/>
+                  {/* <input
                     placeholder="Search drop off location"
                     className="search focus:outline-none"
                     type="search"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -275,13 +276,15 @@ const Forms = () => {
                   </div>
                 </div>
               </div>
-              <div>
-              
-
+              <div
+                onClick={(e) =>
+                  document.querySelector('input[type="date"]').click()
+                }
+              >
                 <input
                   type="date"
                   placeholder="Type here"
-                  className="dtt input input-bordered input-primary w-full max-w-xs"
+                  className="bg-cyan-400 text-white input   w-full max-w-xs"
                 />
               </div>
             </div>
@@ -307,7 +310,7 @@ const Forms = () => {
                 <input
                   type="time"
                   placeholder="3.44 am"
-                  className="dtt dtt2 input  bg-white  w-full max-w-xs "
+                  className="dtt2 bg-cyan-400 text-white input  w-full max-w-xs "
                 />
               </div>
             </div>
@@ -367,7 +370,7 @@ const Forms = () => {
                       <input
                         type="date"
                         placeholder="Type here"
-                        className="dtt input  w-full max-w-xs "
+                        className="dtt2 bg-cyan-400 text-white input  w-full max-w-xs "
                       />
                     </div>
                   </div>
@@ -395,7 +398,7 @@ const Forms = () => {
                       <input
                         type="time"
                         placeholder="3.44 am"
-                        className="dtt dtt2 input  bg-white  w-full max-w-xs "
+                        className="dtt2 input bg-cyan-400 text-white  w-full max-w-xs "
                       />
                     </div>
                   </div>
@@ -407,14 +410,14 @@ const Forms = () => {
           <hr />
 
           <div class="flex  justify-center py-6">
-            <div class="item-detail ">
+            <div class="item-detail">
               <form>
                 <textarea
                   className="messege"
                   type="text"
                   maxlength="100"
                   minlength="10"
-                  placeholder="Enter your name"
+                  placeholder="Note ......"
                 />
               </form>
             </div>
@@ -423,7 +426,7 @@ const Forms = () => {
           <div className="flex justify-center">
             <button
               onClick={() => document.getElementById("my_modal_4").showModal()}
-              className="form-btn btn btn-secondary px-20"
+              className="w-full max-w-xs bg-cyan-400 text-white py-3 rounded-lg  px-20"
             >
               Next
             </button>
@@ -437,52 +440,46 @@ const Forms = () => {
                   </button>
                 </form>
                 <div className="modal-body p-2 ">
-                  
-                  <div className="hero">
-                    <div className="hero-content flex-col">
-                      
-                      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
-                          <div className="form-control">
-                            <label className="label">
-                              <span className="label-text">Email</span>
-                            </label>
-                            <input
-                              type="email"
-                              placeholder="email"
-                              className="input input-bordered"
-                              required
-                            />
-                          </div>
-                          <div className="form-control">
-                            <label className="label">
-                              <span className="label-text">Password</span>
-                            </label>
-                            <input
-                              type="password"
-                              placeholder="password"
-                              className="input input-bordered"
-                              required
-                            />
-                            <label className="label">
-                              <a
-                                href="#"
-                                className="label-text-alt link link-hover"
-                              >
-                                Forgot password?
-                              </a>
-                            </label>
-                          </div>
-                          <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                          </div>
-                        </form>
+                  <div className="card ">
+                    <form className="card-body">
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Name</span>
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          className="input input-bordered"
+                          required
+                        />
                       </div>
-                    </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Email</span>
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          className="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Phone</span>
+                        </label>
+                        <input
+                          type="number"
+                          placeholder="Phone"
+                          className="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div className="form-control mt-6">
+                        <button className="py-3 rounded-lg bg-cyan-400 text-white">Booking</button>
+                      </div>
+                    </form>
                   </div>
-
-
-
                 </div>
               </div>
             </dialog>

@@ -159,10 +159,16 @@
   .messege{
     width: 520px;
     height: 100px;
-    background-color: rgb(227, 227, 227);
+    background-color: hsl(0, 0%, 100%);
     padding: 10px;
     color: black;
-    border-radius: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(72, 206, 199);
+    outline: none;
+  }
+
+  input ::after{
+    color: white!important;
   }
   
   .form-btn{
@@ -296,4 +302,7 @@
     padding-bottom: 0;
     padding-top: 0;
     line-height: 0px;
+  }
+  .leaflet-locationiq-control{
+    width: 482px !important;
   }

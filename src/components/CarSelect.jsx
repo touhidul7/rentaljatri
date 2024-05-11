@@ -7,6 +7,16 @@ const CarSelect = () => {
   const handleSelectVehicle = (vehicle) => {
     setSelectedVehicle(vehicle);
   };
+
+  
+  /* cars details---------- */
+  const cars =[
+    {id:1,name:"Sedan Car",seat:"4 Seats capacity",img:"../../images/s1.png" },
+    {id:2,name:"Primium Car",seat:"4 Seats capacity",img:"../../images/s2.png" },
+    {id:3,name:"Mini Microbus",seat:"7 Seats capacity",img:"../../images/s3.png" },
+    {id:4,name:"Microbus",seat:"11 Seats capacity",img:"../../images/s4.png" },
+    {id:5,name:"Minibus",seat:"22-28 Seats capacity",img:"../../images/s5.png" },
+  ]
   return (
     <div className="flex mt-6 lg:w-1/2 lg:justify-end items-end lg:mt-4 lg:h-[550px] lg:-mb-16 mr-14">
     <div className="w-full max-w-md bg-white border-2 rounded-lg dark:bg-white px-2 pt-6">
@@ -14,90 +24,30 @@ const CarSelect = () => {
         Which vehicle do you need?
       </h1>
       <div className="grid grid-cols-3 gap-4 mb-6 px-4">
-        <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
-            selectedVehicle === 1
-              ? "bg-[#f04935] text-white"
-              : "bg-[#F7F7F7]"
-          }`}
-          onClick={() => handleSelectVehicle(1)}
-        >
-          <img
-            src="../../../public/images/s1.png"
-            alt=""
-            className="w-[60px] h-[60px] mx-auto"
-          />
-          <h5 className="font-semibold">Sedan Car</h5>
-          <p className="text-sm">4 Seats capacity</p>
-        </button>
-        <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
-            selectedVehicle === 2
-              ? "bg-[#f04935] text-white"
-              : "bg-[#F7F7F7]"
-          }`}
-          onClick={() => handleSelectVehicle(2)}
-        >
-          <img
-            src="../../../public/images/s1.png"
-            alt=""
-            className="w-[60px] h-[60px] mx-auto"
-          />
-          <h5 className="font-semibold">Sedan Car</h5>
-          <p className="text-sm">4 Seats capacity</p>
-        </button>
-        <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
-            selectedVehicle === 3
-              ? "bg-[#f04935] text-white"
-              : "bg-[#F7F7F7]"
-          }`}
-          onClick={() => handleSelectVehicle(3)}
-        >
-          <img
-            src="../../../public/images/s1.png"
-            alt=""
-            className="w-[60px] h-[60px] mx-auto"
-          />
-          <h5 className="font-semibold">Sedan Car</h5>
-          <p className="text-sm">4 Seats capacity</p>
-        </button>
-        <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
-            selectedVehicle === 4
-              ? "bg-[#f04935] text-white"
-              : "bg-[#F7F7F7]"
-          }`}
-          onClick={() => handleSelectVehicle(4)}
-        >
-          <img
-            src="../../../public/images/s1.png"
-            alt=""
-            className="w-[60px] h-[60px] mx-auto"
-          />
-          <h5 className="font-semibold">Sedan Car</h5>
-          <p className="text-sm">4 Seats capacity</p>
-        </button>
-        <button
-          className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#f04935] hover:text-white ${
-            selectedVehicle === 5
-              ? "bg-[#f04935] text-white"
-              : "bg-[#F7F7F7]"
-          }`}
-          onClick={() => handleSelectVehicle(5)}
-        >
-          <img
-            src="../../../public/images/s1.png"
-            alt=""
-            className="w-[60px] h-[60px] mx-auto"
-          />
-          <h5 className="font-semibold">Sedan Car</h5>
-          <p className="text-sm">4 Seats capacity</p>
-        </button>
+        {
+          cars.map(item=>  
+          <button
+          key={item.id}
+            className={`w-[125px] h-[165px] pt-4 rounded-lg px-2 transition duration-500 ease-in-out text-center hover:bg-[#29D8DB] hover:text-white ${
+              selectedVehicle === item.id
+                ? "bg-[#29D8DB] text-white"
+                : "bg-[#F7F7F7]"
+            }`}
+            onClick={() => handleSelectVehicle(item.id)}
+          >
+            <img
+              src={item.img}
+              alt=""
+              className="w-[60px] h-[60px] mx-auto"
+            />
+            <h5 className="font-semibold">{item.name}</h5>
+            <p className="text-xs">{item.seat}</p>
+          </button>)
+        }
       </div>
 
       <Link class="nav-link" to="/forms">
-        <button className="bg-[#f04935] text-white rounded-full ml-9 my-4 py-3 mx-auto w-4/5 font-semibold">
+        <button className="bg-[#29D8DB] text-white rounded-full ml-9 my-4 py-3 mx-auto w-4/5 font-semibold">
           Request Trip
         </button>
       </Link>

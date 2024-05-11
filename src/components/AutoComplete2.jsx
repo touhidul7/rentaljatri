@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
-const AutoComplete = () => {
+const AutoComplete2 = () => {
 
     const [searchContainer, setSearchContainer] = useState(null)
     useEffect(() => {
-        const map = L.map("map", {
+        const map = L.map("map2", {
           center: [40.7259, -73.9805],
           zoom: 12,
           scrollWheelZoom: true,
@@ -29,7 +29,7 @@ const AutoComplete = () => {
           displayLatLon(e.feature.feature.display_name, e.latlng.lat, e.latlng.lng);
         });
     
-        const searchBoxControl = document.getElementById("search-box");
+        const searchBoxControl = document.getElementById("search-box2");
         const geocoderContainer = geocoderControl.getContainer();
         setSearchContainer(geocoderContainer)
         searchBoxControl.innerHTML = ''
@@ -37,7 +37,7 @@ const AutoComplete = () => {
     
         function displayLatLon(display_name, lat, lng) {
           const resultString = "You have selected " + display_name + "<br/>Lat: " + lat + "<br/>Lon: " + lng;
-          document.getElementById("result").innerHTML = resultString;
+          document.getElementById("result2").innerHTML = resultString;
         }
     
         return () => {
@@ -48,11 +48,11 @@ const AutoComplete = () => {
 
     return (
         <div>
-        <div id="map"></div>
-            <div id="search-box"></div>
-            <div className='hidden' id="result"></div>
+        <div id="map2"></div>
+            <div id="search-box2"></div>
+            <div className='hidden' id="result2"></div>
         </div>
     );
 };
 
-export default AutoComplete;
+export default AutoComplete2;
