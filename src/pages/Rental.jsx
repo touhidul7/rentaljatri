@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import CarSelect from "../components/CarSelect";
+import Carinfo from "../components/Carinfo";
 
 const Rental = () => {
   return (
@@ -84,6 +85,14 @@ const Rental = () => {
           <p className="w-36">Registered Vehicles</p>
         </div>
       </div>
+
+
+      {/* car-info------ */}
+      <Carinfo/>
+
+
+
+
       {/* Why choose jatri rentals */}
       <div className="mt-24 mb-10 mx-12">
         <h1 className="text-2xl mb-5">Why choose jatri rentals ?</h1>
