@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import CarSelect from "../components/CarSelect";
 import Carinfo from "../components/Carinfo";
 
